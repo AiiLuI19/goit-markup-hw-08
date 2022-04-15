@@ -1,0 +1,38 @@
+// ПОСТОЯННЫЕ КЛИЕНТЫ
+.customers {
+padding-top: 94px;
+}
+.section-title--customers {
+    margin-bottom: 50px;
+}
+
+.customers__list {
+    display: flex;
+    padding-bottom: 94px;
+    justify-content: space-between;
+}
+
+.customs__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    align-items: center;
+    justify-content: center;
+
+    color: #afb1b8;
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+        }
+}
+
+.customers__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
