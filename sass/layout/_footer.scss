@@ -1,10 +1,16 @@
 .footer {
     text-align: center;
     background-color: var(--fuuter-background-color);
+
+    @include desktop {
+        text-align: start;
+    }
 }
+
 .footer__block {
     display: block;
     max-width: 100%;
+
     @include tablet {
         display: flex;
         flex-wrap: wrap;
@@ -12,14 +18,13 @@
         justify-content: space-around;
         align-items: baseline;
     }
+
     @include desktop {
         width: 1200px;
         flex-wrap: nowrap;
-        align-content: center;
         justify-content: flex-start;
-        align-items: baseline;
     }
-    
+
 
 }
 
@@ -31,24 +36,27 @@
     color: var(--title-background-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    
+
     font-size: 24px;
     line-height: 1.17;
-    @include desktop{
-font-size: 26px;
-line-height: 1.2;
+
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.2;
     }
-    
+
 }
+
 .addres {
-    
+
     width: 100%;
     padding-bottom: 60px;
-    @include desktop{
-padding-right: 70px;
+
+    @include desktop {
+        padding-right: 70px;
 
     }
-   
+
 }
 
 .addres__link {
@@ -59,62 +67,66 @@ padding-right: 70px;
 .addres__contact {
     color: rgba(255, 255, 255, 0.6);
 }
+
 .addres__item {
     display: block;
     font-style: normal;
 
     &:not(:last-child) {
         margin-bottom: 8px;
-       
+
     }
-    @include desktop{
-    &:not(:last-child) {
-        margin-bottom: 9px;
-    }
+
+    @include desktop {
+        &:not(:last-child) {
+            margin-bottom: 9px;
+            width: 231px;
+        }
     }
 }
 
 .list .link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-&:hover,
-&:focus {
-    color: var(--accent-color);
-}
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .footer__title {
     width: 100%;
     // 
     margin-bottom: 20px;
-   
+
     font-weight: 700;
     color: var(--title-background-color);
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-   
-// display: flex;
-// margin-bottom: 20px;
-// margin-right: 154px;
-// padding-top: 72px;
-    
+
+    @include desktop {
+        display: flex;
+        margin-bottom: 20px;
+        margin-right: 154px;
+        padding-top: 72px;
+
+    }
+
 }
 
 
-
-
 .media--footer {
-    
-     padding-bottom: 60px;
-    
-    
-        // display: flex;
+    padding-bottom: 60px;
+
+    @include desktop {
+        display: flex;
         // justify-content: center; 
         // align-items: center;
-        // padding-bottom: 100px;
-        // margin-right: 93px;
-    
+        padding-bottom: 100px;
+        margin-right: 93px;
+    }
 }
 
 .media__link--footer {
@@ -124,52 +136,71 @@ padding-right: 70px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover,
     &:focus {
         background-color: var(--accent-color);
-         color: var(--title-background-color);
+        color: var(--title-background-color);
         border-radius: 50%;
-        }
+    }
 }
 
 
 .form-newsletter {
-   padding-bottom: 53px;
-@include tablet {
-    width: 450px;
-    flex-direction: column;
+    padding-bottom: 53px;
 
-    @include desktop {
-        flex-direction: row;
-        width: 358px;
-        margin-right: 12px;
+    @include tablet {
+        width: 450px;
+        flex-direction: column;
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            width: 570px;
+            margin-right: 12px;
+        }
+
     }
-   
+
+    .form-newsletter__input {
+
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+
+        padding: 15px 0 15px 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: transparent;
+        border-radius: 4px;
+        color: #ffffff;
+
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+
+    }
+}
+
+.wrap-mail {
+    @include desktop {
+        display: block;
+    }
 }
 
 .form-newsletter__input {
-    
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-   
-    padding: 15px 0 15px 16px;
+    @include desktop {
+        display: flex;
+        width: 100%;
+        margin-right: 12px;
+        margin-bottom: 0;
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: transparent;
-    border-radius: 4px;
-    color: #ffffff;
-
-    
-
-    &::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-
-        color: rgba(255, 255, 255, 0.6);
-    }
-    
     }
 }
 
@@ -177,6 +208,10 @@ padding-right: 70px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @include desktop {
+        display: flex;
+    }
 }
 
 .btn__icon {
