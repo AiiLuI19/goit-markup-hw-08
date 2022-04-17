@@ -1,17 +1,14 @@
 .hero {
+    
     max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    outline: 1px solid black;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
+    margin-bottom: 60px;
+    margin: 0 auto;
+    padding: 118px 0;
+    text-align: center;
 
     color: var(--title-background-color);
     background-color: var(--fuuter-background-color);
-    text-align: center;
-    letter-spacing: 0.06em;
+  
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
@@ -20,15 +17,23 @@
     background-position: center;
     background-size: cover;
 }
-
 .hero__title {
-    max-width: 696px;
-    padding: 0 45px;
-    margin: 0 auto;
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+    @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+    }
+}
+.hero__wrap{
+max-width: 360px;
+margin: 0 auto;
+@include desktop {
+max-width: 696px;
+}
 }

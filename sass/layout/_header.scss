@@ -1,9 +1,10 @@
 .header {
-    /* position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10; */
+  height: 60px;
+  border-bottom: 1px solid #ececec;
+    
+  @include tablet {
+    display: flex;
+    height: 80px;
     background-color: var(--title-background-color);
 
     font-weight: 500;
@@ -11,48 +12,70 @@
     line-height: 1.14;
 
     border-bottom: 1px solid #ececec;
-}
+}}
 
+@include tablet{
 .header__wrap {
   display: flex;
+  justify-content: space-between;
+  // height: 80px;
   align-items: center;
+  @include desktop{
+    justify-content: center;
+  }
 }
-
 .nav {
   display: flex;
+  align-items: baseline;  //????
+}
 }
 
 .nav__list {
-  display: flex;
-  align-items: center;
-  .link.current {
-    color: var(--accent-color);
+  @include tablet{
+display: flex;
+
+align-items: center;
+text-align: center;
+margin-left: 88px;
+@include desktop{
+  margin-left: auto; //??????
+}
+
+.link.current {
+  @include tablet {
+  color: var(--accent-color);}
+
+  }
   }
 }
-.nav__item {
-  display: flex;
+.nav__list .link {
+  @include tablet {
+    display: flex;
+    position: relative;
+    padding: 32px 0;
+    color: var(--primary-tex-color);
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    @include tablet {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.nav__item {        
+  @include tablet {
+  // display: flex;
   &:not(:last-child) {
     margin-right: 50px;
   }
-}
-
-.nav__list .link {
-  display: flex;
-  position: relative;
-  padding: 32px 0;
-
-  color: var(--primary-tex-color);
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-}
-
-
+}}
 
 .nav__current::after {
+  @include tablet {
   content: "";
   position: absolute;
   bottom: 0;
@@ -61,45 +84,95 @@
   background: #2196f3;
   border-radius: 2px;
 }
+}
 
 .nav__curret--portfolio::after {
+  @include tablet {
   content: "";
   width: 78px;
-}
+}}
+
 .contact {
-  margin-left: auto;
-}
+  @include tablet {
+    display: flex;  //????
+    @include desktop{
+    margin-left: auto;
+    }
+  
+}}
 .contact__list {
-  display: flex;
+  @include tablet {
+  display: block;
+  padding: 21px 0;
   align-items: center;
-}
-
-.contact__item {
-  display: flex;
-  padding-right: 10px;
-  align-items: center;
-  justify-content: center;
-  &:not(:last-child) {
-    margin-right: 50px;
+  @include desktop{
+    display: flex;
   }
-}
+}}
 
-.contact__list .link {
-  display: flex;
-  padding: 32px 0;
-  align-items: center;
 
+  .contact__list .link {
+    @include tablet {
   color: var(--title-text-color);
-
+font-size: 12px;
+line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: var(--accent-color);
+    
+  }}
+  @include desktop{
+    display: flex;
+    padding: 32px 0;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
+.contact__item {
+  @include tablet {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+@include desktop{
+padding-right: 10px;
+align-items: center;
+justify-content: center;
+
+&:not(:last-child) {
+ margin-right: 30px;
+margin-bottom: 0;}
+
+}
+    
+  }
+  .link{                  //??????????????
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+ 
 
 .contact__icon {
+  @include tablet {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+  align-items: center;
+}
+@include desktop {
+margin-right: 10px;
+}}
+@media screen and (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
+
+  .contact {
+    display: none;
+  }
 }

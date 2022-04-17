@@ -1,22 +1,34 @@
 // ОСОБЕННОСТИ
 .features {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  } 
 }
 
 .features__list {
-    display: flex;
-    margin-right: -30px;
+  margin-bottom: -30px;
+  @include tablet {
+ display: flex;
+ flex-wrap: wrap;
+ margin-right: -30px;
+  }
+
 }
 
 .features__item {
-    width: calc(100% / 3 - 30px);
+  // width:100%;
+  text-align: center;
+  margin-bottom: 30px;
+  @include tablet {
+    width: calc(100% / 2 - 30px);
     margin-right: 30px;
-}
-
-.features__icon {
-    height: 70px;
-    width: 70px;
+  }
+  @include desktop {
+    width: calc(100% / 4 - 30px);
+  }
 }
 
 .features__img {
@@ -24,6 +36,10 @@
     background: var(--botton-background-color);
     margin-bottom: 30px;
     padding: 25px 100px;
+}
+.features__icon {
+  height: 70px;
+  width: 70px;
 }
 
 .features__title {
@@ -35,27 +51,9 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    @include tablet {
+      text-align: left;}
 }
-/* .features__item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--botton-background-color);
-  border-radius: 4px;
-  margin-bottom: 30px;
-} */
-/* .features__item:nth-child(1)::before {
-  background-image: url(../images/anten.svg);
+.features__text{
+text-align: left;
 }
-.features__item:nth-child(2)::before {
-  background-image: url(../images/clock.svg);
-}
-.features__item:nth-child(3)::before {
-  background-image: url(../images/pk.svg);
-}
-.features__item:nth-child(4)::before {
-  background-image: url(../images/cosmo.svg);
-} */

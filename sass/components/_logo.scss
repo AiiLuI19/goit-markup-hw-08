@@ -1,15 +1,21 @@
 .logo {
+    padding: 16px 0;
     display: flex;
-    padding: 24px 0;
-    margin-right: 93px;
-
-    color: #000000;
+    
+    color: var(--primary-tex-color);
 
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-}
+    font-size: 24px;
+    line-height: 1.17;
+    @include desktop {
+        color: #000000;
+        font-size: 26px;
+        line-height: 1.2;
+        padding: 24px 0;
+        margin-right: 93px;
+    }}
+
 
 .logo__accent {
     color: var(--accent-color);
