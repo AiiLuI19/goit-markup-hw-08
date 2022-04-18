@@ -1,6 +1,7 @@
 .logo {
-    padding: 16px 0;
-    display: flex;
+    padding: 16px auto;
+    display: inline-flex;
+   
     
     color: var(--primary-tex-color);
 
@@ -9,6 +10,7 @@
     font-size: 24px;
     line-height: 1.17;
     @include desktop {
+        display: flex;
         color: #000000;
         font-size: 26px;
         line-height: 1.2;

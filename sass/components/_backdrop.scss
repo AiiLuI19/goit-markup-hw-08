@@ -6,10 +6,6 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 500ms, visibility 500ms;
-    &.is-hidden {
-        opacity: 0;
-        pointer-events: none;
-        visibility: hidden;
-    }
+    
 }
 

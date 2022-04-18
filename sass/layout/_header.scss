@@ -149,23 +149,22 @@ margin-bottom: 0;}
 }
     
   }
-  .link{                  //??????????????
+  .link{                  
     @include tablet {
       display: flex;
       align-items: center;
     }
   }
 }
- 
-
 .contact__icon {
   @include tablet {
   fill: currentColor;
   margin-right: 8px;
   align-items: center;
 }
-@include desktop {
-margin-right: 10px;
+  @include desktop {
+  margin-right: 10px;
+  align-items: center;
 }}
 @media screen and (max-width: 767px) {
   .nav__list {
@@ -175,4 +174,23 @@ margin-right: 10px;
   .contact {
     display: none;
   }
+}
+
+.menu-open-btn{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  color: #212121;
+  cursor: pointer;
+
+  @include tablet{
+    display: none;
+  }
+}
+.header__wrap{
+  display: flex;  //перенести там где таблетка
+  align-items: center;
+  height: 100%;
 }
