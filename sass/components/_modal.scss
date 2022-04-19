@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
 
     max-width: 450px;
-    // max-width: 528px;
+    
     padding: 40px;
 
     background-color: #ffffff;
@@ -15,6 +15,9 @@
     line-height: 1.44;
 
     transition: transform 400ms cubic-bezier(0.39, 1.03, 0.82, 0.08);
+@include desktop{
+     max-width: 528px;
+}
 }
 
 

@@ -184,11 +184,21 @@ margin-bottom: 0;}
   align-items: center;
   color: #212121;
   cursor: pointer;
+  &:hover,
+  &:focus{
+    color:var(--accent-color);
+  }
+  
 
   @include tablet{
     display: none;
   }
 }
+
+.menu-open_icon{
+  fill: currentColor;
+}
+
 .header__wrap{
   display: flex;  //перенести там где таблетка
   align-items: center;
