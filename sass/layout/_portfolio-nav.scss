@@ -1,6 +1,6 @@
 .portfolio {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     text-align: center;
     @include desktop {
     padding-bottom: 94px;
@@ -49,11 +49,15 @@
 .portfolio__nav {
     display: flex;
     flex-wrap:wrap;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     justify-content: flex-start;
     margin-bottom: -15px;
     @include tablet {
     justify-content: center;
+    padding-bottom: 30px;
+    }
+    @include desktop {
+    padding-bottom: 50px;
     }
 }
 
@@ -62,4 +66,5 @@
     &:not(:last-child) {
         margin-right: 8px;
     }
+
 }
